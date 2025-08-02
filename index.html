@@ -13,25 +13,27 @@
             font-family: 'Inter', sans-serif;
         }
     </style>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MD8RW4N1S2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MD8RW4N1S2');
-</script>
 </head>
-
 <body class="bg-gray-50 text-gray-800">
 
     <!-- 
-    Color Palette Reference: Energetic & Playful
+    Chosen Palette: Energetic & Playful
     #00A6ED (Bright Blue)
     #72D33A (Green)
     #E31D2A (Red)
     -->
+
+    <!-- 
+    Application Structure Plan: A single-page informational and campaign hub. It starts with a clear problem/solution statement, provides links to detailed resources (policy doc, explainer, infographic), and now includes an actionable "Email Your MP" section to drive engagement. The structure is designed to inform visitors and then immediately provide them with the tools to act on that information.
+    -->
+    <!-- 
+    Visualization & Content Choices: 
+    - Problem/Solution -> Goal: Inform -> Viz: Styled text blocks. Method: HTML/CSS. (CONFIRM: NO SVG).
+    - Resources -> Goal: Organize -> Viz: Grid of cards with Unicode icons. Method: HTML/CSS. (CONFIRM: NO SVG).
+    - Get Involved -> Goal: Organize -> Viz: Grid of cards with clear calls to action. Method: HTML/CSS. (CONFIRM: NO SVG).
+    - Email Template -> Goal: Organize/Action -> Viz: Pre-formatted text block with a "Copy" button. Method: HTML/CSS/JS. (CONFIRM: NO SVG/Mermaid JS).
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <div class="container mx-auto p-4 md:p-8 max-w-5xl">
 
@@ -43,13 +45,13 @@
         <main>
             <section id="problem" class="my-16 bg-white rounded-lg shadow-md p-8">
                 <h2 class="text-3xl font-bold text-center mb-4 text-[#E31D2A]">The Problem: A Flawed Approach to Online Safety</h2>
-                <p class="text-lg text-gray-700 leading-relaxed">The current <em class="font-italic">Online Safety Amendment (Social Media Minimum Age) Act</em> enforces a blanket ban that is not only easy for children to circumvent but also creates a significant privacy risk for all Australians. Its biggest flaw is that it forces <strong class="text-[#E31D2A]">every single person in Australia—adults, kids, and even tourists—to hand over their sensitive ID to tech giants</strong> just to use an app.</p>
+                <p class="text-lg text-gray-700 leading-relaxed">The current *Online Safety Amendment (Social Media Minimum Age) Act* enforces a blanket ban that is not only easy for children to circumvent but also creates a significant privacy risk for all Australians. Its biggest flaw is that it forces <strong class="text-[#E31D2A]">every single person in Australia—adults, kids, and even tourists—to hand over their sensitive ID to tech giants</strong> just to use an app.</p>
                 <p class="mt-4 text-lg text-gray-700 leading-relaxed">This approach replaces parental responsibility with a blunt government mandate, and it won't work.</p>
             </section>
 
             <section id="solution" class="my-16 bg-white rounded-lg shadow-md p-8">
                 <h2 class="text-3xl font-bold text-center mb-4 text-[#72D33A]">The Solution: Empowering Parents with Real Tools</h2>
-                <p class="text-lg text-gray-700 leading-relaxed">The PCDSL framework is a sophisticated safety system, not a simple prohibition. It is a secure, <strong class="font-bold">opt-in</strong> public-private partnership that gives parents the choice to supervise their children's online activity effectively.</p>
+                <p class="text-lg text-gray-700 leading-relaxed">The PCDSL framework is a sophisticated safety system, not a simple prohibition. It is a secure, **opt-in** public-private partnership that gives parents the choice to supervise their children's online activity effectively.</p>
                 <p class="mt-4 text-lg text-gray-700 leading-relaxed">The core of the framework is a central, secure government hub (linked to myGov) where parents can register their child's devices. Online platforms are then required to check this hub and automatically apply a standardized set of robust parental controls to any account used on that device.</p>
                  <p class="mt-4 text-lg text-gray-700 font-semibold leading-relaxed text-center">This is about giving parents the right tools for the job, not having the government do a poor job of parenting for everyone.</p>
             </section>
@@ -57,17 +59,17 @@
             <section id="resources" class="my-16">
                 <h2 class="text-3xl font-bold text-center mb-8">Project Documents & Resources</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <a href="https://parentchild-dsl.github.io/PCDSL/proposal" class="block bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow">
+                    <a href="./policy.html" class="block bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow">
                         <span class="text-5xl">📄</span>
                         <h3 class="text-xl font-bold mt-4 mb-2">The Full Policy Proposal</h3>
                         <p class="text-gray-600">The complete, detailed policy document submitted to government ministers and the eSafety Commissioner.</p>
                     </a>
-                    <a href="https://parentchild-dsl.github.io/PCDSL/explainer" class="block bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow">
+                    <a href="./explainer.html" class="block bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow">
                         <span class="text-5xl">💡</span>
                         <h3 class="text-xl font-bold mt-4 mb-2">The Simple Explainer</h3>
                         <p class="text-gray-600">An easy-to-read summary of the framework, explaining how it works and why it's a better solution.</p>
                     </a>
-                    <a href="https://parentchild-dsl.github.io/PCDSL/infograph" class="block bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow">
+                    <a href="./infographic.html" class="block bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow">
                         <span class="text-5xl">📊</span>
                         <h3 class="text-xl font-bold mt-4 mb-2">The Infographic</h3>
                         <p class="text-gray-600">A visual, single-page infographic that compares the government's ban with the PCDSL framework.</p>
@@ -76,24 +78,55 @@
             </section>
             
             <section id="get-involved" class="my-16 bg-blue-100 rounded-lg p-8">
-                <h2 class="text-3xl font-bold text-center mb-8 text-[#00A6ED]">How to Get Involved</h2>
-                <p class="text-center text-lg text-gray-700 mb-8">Your support is crucial to push for a smarter, safer, and more effective approach to online safety in Australia.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">1. Read the Proposal</h3>
-                        <p class="text-gray-600">Familiarise yourself with the details and the robust failsafes designed to protect both children and parental rights.</p>
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#00A6ED]">Take Action: Email the Key Decision-Makers</h2>
+                <p class="text-center text-lg text-gray-700 mb-8">Let the people in charge know you support a smarter approach to online safety. Below is a list of key contacts and a template you can use to email them all at once. You can also contact your local MP.</p>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">Key Contacts</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <p><strong>Government (Labor):</strong></p>
+                        <ul class="list-disc pl-6">
+                            <li>The Hon. Anika Wells MP, Minister for Communications</li>
+                            <li>The Hon. Mark Dreyfus KC, MP, Attorney-General</li>
+                            <li>The Hon. Amanda Rishworth MP, Minister for Social Services</li>
+                        </ul>
+                        <p><strong>Opposition (Liberal):</strong></p>
+                        <ul class="list-disc pl-6">
+                            <li>Senator The Hon. Sarah Henderson, Shadow Minister for Communications</li>
+                            <li>Senator The Hon. Michaelia Cash, Shadow Attorney-General</li>
+                            <li>The Hon. Michael Sukkar MP, Shadow Minister for Social Services</li>
+                        </ul>
+                        <p><strong>Crossbench (Greens) & eSafety:</strong></p>
+                        <ul class="list-disc pl-6">
+                            <li>Senator Sarah Hanson-Young, Spokesperson for Communications</li>
+                            <li>Senator David Shoebridge, Spokesperson for Digital Rights & IT</li>
+                            <li>Ms. Julie Inman Grant, eSafety Commissioner</li>
+                        </ul>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">2. Sign the Petitions</h3>
-                        <p class="text-gray-600">
-                            <a href="https://www.change.org/Parent-Child-Link" class="text-[#00A6ED] font-semibold hover:underline" target="_blank">Sign the Change.org Petition</a><br>
-                            and search for e-petition <em class="font-bold">EN7828</em> on the Parliament House website when it's approved.
-                        </p>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4">Email Template:</h3>
+                    <div id="emailTemplateContainer" class="relative">
+                        <textarea id="emailTemplate" readonly class="w-full h-96 p-4 bg-gray-50 border rounded-lg text-gray-800 font-mono text-sm">To: Minister.Wells@mo.communications.gov.au, attorney.general@ag.gov.au, minister.rishworth@dss.gov.au, senator.henderson@aph.gov.au, senator.cash@aph.gov.au, michael.sukkar.mp@aph.gov.au, senator.hanson-young@aph.gov.au, senator.shoebridge@aph.gov.au, enquiries@esafety.gov.au
+
+Subject: A Better Approach to Online Safety - The Parent-Child Digital Safety Link
+
+Dear Ministers, Shadow Ministers, Senators, and Commissioner,
+
+I am writing to express my serious concerns about the Online Safety Amendment (Social Media Minimum Age) Act. While I support the goal of protecting children, the current approach of a blanket ban enforced by invasive age verification is flawed, ineffective, and a significant risk to the privacy of all Australians.
+
+I urge you to consider a smarter, more effective alternative: the ‘Parent-Child Digital Safety Link’ (PCDSL) framework.
+
+This proposal offers a practical, parent-led solution that empowers families with real safety tools, rather than imposing a one-size-fits-all ban. It respects parental rights and protects privacy by using a secure, opt-in system through myGov, avoiding the need for every citizen to hand over their ID to tech companies.
+
+This is a superior approach that achieves the government's safety goals without the significant drawbacks. I ask that you give this comprehensive proposal your full consideration in an urgent review of the current legislation.
+
+Sincerely,
+
+[Your Name]
+[Your Suburb/Postcode]</textarea>
+                        <button id="copyButton" class="absolute top-2 right-2 bg-[#00A6ED] text-white font-bold py-1 px-3 rounded-lg hover:bg-[#008bc5] transition-colors">Copy</button>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">3. Share This Project</h3>
-                        <p class="text-gray-600">Share this page, the petitions, and the explainer with your networks, local media, and your local MP.</p>
-                    </div>
+                     <p id="copyFeedback" class="text-center mt-2 text-green-600 font-semibold opacity-0 transition-opacity">Copied to clipboard!</p>
                 </div>
             </section>
         </main>
@@ -103,5 +136,28 @@
         </footer>
 
     </div>
+
+    <script>
+        const copyButton = document.getElementById('copyButton');
+        const emailTemplate = document.getElementById('emailTemplate');
+        const copyFeedback = document.getElementById('copyFeedback');
+
+        copyButton.addEventListener('click', () => {
+            emailTemplate.select();
+            emailTemplate.setSelectionRange(0, 99999); 
+            
+            try {
+                document.execCommand('copy');
+                copyFeedback.style.opacity = '1';
+                setTimeout(() => {
+                    copyFeedback.style.opacity = '0';
+                }, 2000);
+            } catch (err) {
+                alert('Oops, unable to copy');
+            }
+
+            window.getSelection().removeAllRanges();
+        });
+    </script>
 </body>
 </html>
