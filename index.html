@@ -79,7 +79,7 @@
             
             <section id="get-involved" class="my-16 bg-blue-100 rounded-lg p-8">
                 <h2 class="text-3xl font-bold text-center mb-8 text-[#00A6ED]">Take Action: Email the Key Decision-Makers</h2>
-                <p class="text-center text-lg text-gray-700 mb-8">Let the people in charge know you support a smarter approach to online safety. Below is a list of key contacts and a template you can use to email them all at once. You can also contact your local MP.</p>
+                <p class="text-center text-lg text-gray-700 mb-8">Let the people in charge know you support a smarter approach to online safety. Below is a list of key contacts and a button to open and pre-fill an email in your default email client. You can also contact your local MP.</p>
                 
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <h3 class="text-xl font-bold mb-4">Key Contacts</h3>
@@ -104,13 +104,40 @@
                         </ul>
                     </div>
 
-                    <h3 class="text-xl font-bold mt-8 mb-4">Email Template:</h3>
-                    <div id="emailTemplateContainer" class="relative">
-                        <textarea id="emailTemplate" readonly class="w-full h-96 p-4 bg-gray-50 border rounded-lg text-gray-800 font-mono text-sm">To: Minister.Wells@mo.communications.gov.au, attorney.general@ag.gov.au, minister.rishworth@dss.gov.au, senator.henderson@aph.gov.au, senator.cash@aph.gov.au, michael.sukkar.mp@aph.gov.au, senator.hanson-young@aph.gov.au, senator.shoebridge@aph.gov.au, enquiries@esafety.gov.au
+                    <h3 class="text-xl font-bold mt-8 mb-4">Take Action</h3>
+                     <p class="text-gray-600 mb-4">Click the button below to open your email client with a pre-filled message. You can edit the text before sending.</p>
+                    <button id="emailButton" class="w-full bg-[#00A6ED] text-white font-bold py-3 px-4 rounded-lg hover:bg-[#008bc5] transition-colors text-lg">
+                        Open & Pre-fill Email
+                    </button>
+                </div>
+            </section>
+        </main>
 
-Subject: A Better Approach to Online Safety - The Parent-Child Digital Safety Link
+        <footer class="text-center my-12 border-t pt-8">
+            <p class="text-gray-600">Thank you for your interest and support.</p>
+        </footer>
 
-Dear Ministers, Shadow Ministers, Senators, and Commissioner,
+    </div>
+
+    <script>
+        const emailButton = document.getElementById('emailButton');
+
+        emailButton.addEventListener('click', () => {
+            const recipients = [
+                'Minister.Wells@mo.communications.gov.au',
+                'attorney.general@ag.gov.au',
+                'minister.rishworth@dss.gov.au',
+                'senator.henderson@aph.gov.au',
+                'senator.cash@aph.gov.au',
+                'michael.sukkar.mp@aph.gov.au',
+                'senator.hanson-young@aph.gov.au',
+                'senator.shoebridge@aph.gov.au',
+                'enquiries@esafety.gov.au'
+            ].join(',');
+
+            const subject = "A Better Approach to Online Safety - The Parent-Child Digital Safety Link";
+            
+            const body = `Dear Ministers, Shadow Ministers, Senators, and Commissioner,
 
 I am writing to express my serious concerns about the Online Safety Amendment (Social Media Minimum Age) Act. While I support the goal of protecting children, the current approach of a blanket ban enforced by invasive age verification is flawed, ineffective, and a significant risk to the privacy of all Australians.
 
@@ -123,40 +150,11 @@ This is a superior approach that achieves the government's safety goals without 
 Sincerely,
 
 [Your Name]
-[Your Suburb/Postcode]</textarea>
-                        <button id="copyButton" class="absolute top-2 right-2 bg-[#00A6ED] text-white font-bold py-1 px-3 rounded-lg hover:bg-[#008bc5] transition-colors">Copy</button>
-                    </div>
-                     <p id="copyFeedback" class="text-center mt-2 text-green-600 font-semibold opacity-0 transition-opacity">Copied to clipboard!</p>
-                </div>
-            </section>
-        </main>
+[Your Suburb/Postcode]`;
 
-        <footer class="text-center my-12 border-t pt-8">
-            <p class="text-gray-600">Thank you for your interest and support.</p>
-        </footer>
-
-    </div>
-
-    <script>
-        const copyButton = document.getElementById('copyButton');
-        const emailTemplate = document.getElementById('emailTemplate');
-        const copyFeedback = document.getElementById('copyFeedback');
-
-        copyButton.addEventListener('click', () => {
-            emailTemplate.select();
-            emailTemplate.setSelectionRange(0, 99999); 
+            const mailtoLink = `mailto:${recipients}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             
-            try {
-                document.execCommand('copy');
-                copyFeedback.style.opacity = '1';
-                setTimeout(() => {
-                    copyFeedback.style.opacity = '0';
-                }, 2000);
-            } catch (err) {
-                alert('Oops, unable to copy');
-            }
-
-            window.getSelection().removeAllRanges();
+            window.location.href = mailtoLink;
         });
     </script>
 </body>
