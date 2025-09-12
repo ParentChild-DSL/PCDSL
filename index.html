@@ -23,18 +23,6 @@
     #E31D2A (Red)
     -->
 
-    <!-- 
-    Application Structure Plan: A single-page informational and campaign hub. It starts with a clear problem/solution statement, provides links to detailed resources (policy doc, explainer, infographic), and now includes an actionable "Email Your MP" section to drive engagement. The structure is designed to inform visitors and then immediately provide them with the tools to act on that information.
-    -->
-    <!-- 
-    Visualization & Content Choices: 
-    - Problem/Solution -> Goal: Inform -> Viz: Styled text blocks. Method: HTML/CSS. (CONFIRM: NO SVG).
-    - Resources -> Goal: Organize -> Viz: Grid of cards with Unicode icons. Method: HTML/CSS. (CONFIRM: NO SVG).
-    - Get Involved -> Goal: Organize -> Viz: Grid of cards with clear calls to action. Method: HTML/CSS. (CONFIRM: NO SVG).
-    - Email Template -> Goal: Organize/Action -> Viz: Pre-formatted text block with a "Copy" button. Method: HTML/CSS/JS. (CONFIRM: NO SVG/Mermaid JS).
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-
     <div class="container mx-auto p-4 md:p-8 max-w-5xl">
 
         <header class="text-center my-12">
@@ -47,13 +35,38 @@
                 <h2 class="text-3xl font-bold text-center mb-4 text-[#E31D2A]">The Problem: A Flawed Approach to Online Safety</h2>
                 <p class="text-lg text-gray-700 leading-relaxed">The current *Online Safety Amendment (Social Media Minimum Age) Act* enforces a blanket ban that is not only easy for children to circumvent but also creates a significant privacy risk. Its biggest flaw is that it forces <strong class="text-[#E31D2A]">every single person</strong> to undergo a <strong class="text-[#E31D2A]">one-time age verification</strong> when they create an account, or the first time they use an existing account in Australia. This forces adults, kids, and even tourists to hand over their sensitive ID to tech giants.</p>
                 <p class="mt-4 text-lg text-gray-700 leading-relaxed">This approach replaces parental responsibility with a blunt government mandate, and it won't work.</p>
+                
+                <!-- Updated Section on Scams -->
+                <div class="mt-8 pt-6 border-t border-red-200">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-[#E31D2A]">A Gift to Scammers and Identity Thieves</h3>
+                    <div class="flex items-start text-lg text-gray-700 leading-relaxed">
+                        <span class="text-4xl mr-4">⚠️</span>
+                        <div>
+                            <p>Labor's plan trains the entire Australian population to hand over sensitive ID documents to countless websites. This normalizes a dangerous behaviour and creates the perfect environment for phishing scams. Scammers will create convincing fake verification pages to harvest passports and driver's licenses from unsuspecting users.</p>
+                            <p class="mt-4">Because every platform will have its own system, you will have no simple way of knowing if a request is legitimate or a scam. This policy doesn't just create a privacy risk; it actively makes every Australian <strong>less</strong> secure online.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section id="solution" class="my-16 bg-white rounded-lg shadow-md p-8">
                 <h2 class="text-3xl font-bold text-center mb-4 text-[#72D33A]">The Solution: Empowering Parents with Real Tools</h2>
-                <p class="text-lg text-gray-700 leading-relaxed">The PCDSL framework is a sophisticated safety system, not a simple prohibition. It is a secure, **opt-in** public-private partnership that gives parents the choice to supervise their children's online activity effectively.</p>
-                <p class="mt-4 text-lg text-gray-700 leading-relaxed">Parents will be able to opt in to a child device registry that account holding sites must check while anyone logs in; devices on the child registry cannot have new accounts created or logged into without parental approval. This meets Labor's stated goals. The PCDSL framework, however, goes far beyond this by giving the parent a virtual space through which they can reach their kids' virtual lives. The core of the framework is a central, secure government hub (linked to myGov) where parents can register their child's devices. Online platforms are then required to check this hub and automatically apply a standardized set of robust parental controls to any account used on that device.</p>
-                 <p class="mt-4 text-lg text-gray-700 font-semibold leading-relaxed text-center">This is about giving parents the right tools for the job, not having the government do a poor job of parenting for everyone.</p>
+                <p class="text-lg text-gray-700 leading-relaxed">The PCDSL framework is a sophisticated safety system, not a simple prohibition. It is a secure, <strong>opt-in</strong> public-private partnership that gives parents the choice to supervise their children's online activity effectively.</p>
+                <p class="mt-4 text-lg text-gray-700 leading-relaxed">The core of the framework is a central, secure government hub (linked to myGov) where parents can register their child's devices. Online platforms are then required to check this hub and automatically apply a standardized set of robust parental controls to any account used on that device.</p>
+                
+                <!-- Updated Section on Scam Prevention -->
+                <div class="mt-8 pt-6 border-t border-green-200">
+                     <h3 class="text-2xl font-bold text-center mb-4 text-[#72D33A]">Designed to Defeat Scams</h3>
+                    <div class="flex items-start text-lg text-gray-700 leading-relaxed">
+                        <span class="text-4xl mr-4">🛡️</span>
+                        <div>
+                            <p>The PCDSL framework defeats this entire category of scam by design. A parent <strong>only ever</strong> verifies their identity once, on the secure, official Australian Government myGov hub. You are <strong>never</strong> asked to provide ID to a social media platform directly.</p>
+                            <p class="mt-4 font-semibold">This creates a simple security rule for everyone: If any site other than the official myGov portal asks for your ID, it is a scam.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-8 text-lg text-gray-700 font-semibold leading-relaxed text-center">This is about giving parents the right tools for the job, not having the government do a poor job of parenting for everyone.</p>
             </section>
 
             <section id="resources" class="my-16">
@@ -76,11 +89,10 @@
                     </a>
                 </div>
             </section>
-                         <section id="get-involved" class="my-16 bg-blue-100 rounded-lg p-8">
+
+            <section id="get-involved" class="my-16 bg-blue-100 rounded-lg p-8">
                 <h2 class="text-3xl font-bold text-center mb-8 text-[#00A6ED]">How to Get Involved</h2>
-                <p class="text-center text-lg text-gray-700 mb-8">The only way we can abolish Labor's flawed <em>Social Media Minimum Age Act</em> is to make it irrelevant </p>
-				<p class="text-center text-lg text-gray-700 mb-8">
-				Your support is crucial to push for a smarter, safer, and more effective approach to online safety in Australia.</p>
+                <p class="text-center text-lg text-gray-700 mb-8">Your support is crucial to push for a smarter, safer, and more effective approach to online safety in Australia.</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                     <div>
                         <h3 class="text-xl font-bold mb-2">1. Read the Proposal</h3>
@@ -91,7 +103,7 @@
                         <p class="text-gray-600">
                             <a href="https://www.change.org/Parent-Child-Link" class="text-[#00A6ED] font-semibold hover:underline" target="_blank">Sign the Change.org Petition</a><br>
                             and Sign the e-petition
-							 <em class="font-bold">EN7828</em> on the Parliament House website by following <a href="https://www.aph.gov.au/e-petitions/petition/EN7828" class="text-[#00A6ED] font-semibold hover:underline" target="_blank"> this link</a>
+							 <strong class="font-bold">EN7828</strong> on the Parliament House website by following <a href="https://www.aph.gov.au/e-petitions/petition/EN7828" class="text-[#00A6ED] font-semibold hover:underline" target="_blank"> this link</a>
                         </p>
                     </div>
                     <div>
@@ -100,8 +112,8 @@
                     </div>
                 </div>
             </section>
-        </main>
-            <section id="get-involved" class="my-16 bg-blue-100 rounded-lg p-8">
+        
+            <section id="take-action" class="my-16 bg-blue-100 rounded-lg p-8">
                 <h2 class="text-3xl font-bold text-center mb-8 text-[#00A6ED]">Take Action: Get the Word Out</h2>
                 <p class="text-center text-lg text-gray-700 mb-8">Let the people in charge know you support a smarter approach to online safety. Use the tools below to email or tweet at the key decision-makers. You can also contact your local MP.</p>
                 
